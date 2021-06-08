@@ -79,15 +79,17 @@
             }
             //--------------------------------------------------------------------------------------------
             function validarDatos() {
-                if(esValido(document.getElementById("name").value) && esValido(document.getElementById("pass").value) && count < 5) {
+                if(esValido(document.getElementById("name").value) && esValido(document.getElementById("pass").value)) {
                     console.log("-----INGRESO EXITOSO-----");
                     alert("Ingreso exitoso!");
                 }
                 else {
-                    console.log("-----INGRESO FALLIDO-----");
-                    alert("Ingreso fallido!");
+                    if (count < 5){             
+                        console.log("-----INGRESO FALLIDO-----");
+                        alert("Ingreso fallido!");
                 }
-                count++
+                    alert("AAAAAAAAAAA");
+               }
             }
             //--------------------------------------------------------------------------------------------
         </script>
